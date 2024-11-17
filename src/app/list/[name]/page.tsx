@@ -11,11 +11,15 @@ interface Book {
   amazon_product_url: string;
 }
 
+interface PageProps {
+  params: {
+    name: string;
+  };
+}
+
 export default async function BookListPage({
   params,
-}: {
-  params: { name: string };
-}) {
+}: PageProps): Promise<JSX.Element> {
   try {
     const response = await fetch(
       `https://books-api.nomadcoders.workers.dev/list?name=${params.name}`
@@ -43,16 +47,19 @@ export default async function BookListPage({
                   priority
                 />
               </div>
-              <h2 className={styles.bookTitle}>{book.title}</h2>
-              <p className={styles.author}>{book.author}</p>
-              <a
-                href={book.amazon_product_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.button}
-              >
-                Buy now
-              </a>
+              <div className={styles.info}>
+                <h2 className={styles.bookTitle}>{book.title}</h2>
+                <p className={styles.author}>{book.author}</p>
+                <p className={styles.description}>{book.description}</p>
+                <a
+                  href={book.amazon_product_url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.button}
+                >
+                  Buy on Amazon
+                </a>
+              </div>
             </div>
           ))}
         </div>
