@@ -11,13 +11,15 @@ interface Book {
   amazon_product_url: string;
 }
 
-type Props = {
-  params: { name: string }
+type PageParams = {
+  name: string;
 }
 
 export default async function BookListPage({
   params,
-}: Props) {
+}: {
+  params: PageParams;
+}) {
   try {
     const response = await fetch(
       `https://books-api.nomadcoders.workers.dev/list?name=${params.name}`
