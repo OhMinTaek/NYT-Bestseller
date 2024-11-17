@@ -1,0 +1,37 @@
+.header {
+    background-color: #000;
+    padding: 1rem 0;
+    color: white;
+  }
+  
+  .headerContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .navLinks {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .navLink {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.2s ease;
+  }
+  
+  .navLink:hover {
+    color: #ccc;
+  }
