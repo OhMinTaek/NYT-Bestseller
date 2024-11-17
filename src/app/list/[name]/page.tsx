@@ -1,4 +1,3 @@
-// src/app/list/[name]/page.tsx
 import Image from 'next/image';
 import styles from './Detail.module.css';
 
@@ -11,14 +10,10 @@ interface Book {
   amazon_product_url: string;
 }
 
-type PageParams = {
-  name: string;
-}
-
 export default async function BookListPage({
   params,
 }: {
-  params: PageParams;
+  params: { name: string };
 }) {
   try {
     const response = await fetch(
