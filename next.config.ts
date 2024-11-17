@@ -9,6 +9,9 @@ const nextConfig = {
     // 프로덕션에서는 권장하지 않음
     ignoreBuildErrors: true,
   },
+  experimental: {
+    optimizeCss: true,
+  },
 }
 
 module.exports = nextConfig
