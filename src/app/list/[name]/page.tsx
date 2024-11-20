@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from './Detail.module.css';
+import styles from '@/styles/Detail.module.css';
 
 interface Book {
   primary_isbn10: string;

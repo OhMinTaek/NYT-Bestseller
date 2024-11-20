@@ -2,7 +2,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import Link from 'next/link';
-import "./globals.css";
+import "@/styles/globals.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,11 +18,6 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "NYT Bestsellers",
   description: "New York Times Bestsellers Explorer",
-  icons: {
-    icon: [
-      { url: './favicon.ico' }
-    ],
-  }
 };
 
 export default function RootLayout({
@@ -33,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="./favicon.ico" />
+        <link rel="icon" href="/favicon.ico" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <nav className="nav">

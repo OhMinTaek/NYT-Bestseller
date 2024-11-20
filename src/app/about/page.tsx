@@ -1,5 +1,5 @@
 // src/app/about/page.tsx
-import styles from './About.module.css';
+import styles from '@/styles/About.module.css';
 
 export default function AboutPage() {
   return (
